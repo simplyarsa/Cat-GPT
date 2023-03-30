@@ -3,6 +3,7 @@ import axios from 'axios';
 import './App.css'
 import Tile from './Tile.jsx'
 import { AiFillGithub, AiFillLinkedin, AiOutlineMessage, AiOutlinePlus } from 'react-icons/ai';
+import capitalized from './word';
 
 export default function App() {
 
@@ -16,17 +17,17 @@ export default function App() {
 
   const [allInfo, setallInfo] = useState([])
 
-  const meow = () => {
-    let rand = Math.floor(Math.random() * 20) + 3;
-    return "meow ".repeat(rand);
-  }
+  // const meow = () => {
+  //   let rand = Math.floor(Math.random() * 20) + 3;
+  //   return "meow ".repeat(rand);
+  // }
 
   const handleChange = (event) => {
     setInfo(prev => ({ ...prev, [event.target.name]: event.target.value }))
   };
 
   useEffect(() => {
-    setInfo(prev => ({ ...prev, desc: meow() }))
+    setInfo(prev => ({ ...prev, desc: capitalized }))
     const getData = async () => {
       try {
         const res = await axios.get("https://api.thecatapi.com/v1/images/search?api_key=live_aZEF4SeBIv5sZnfKDCgauFT9gVDf7R9ftMxEE0FR2Y4rQMbrahJ5ajYBZhJyb0Ek")
