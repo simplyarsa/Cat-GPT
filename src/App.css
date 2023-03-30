@@ -1,38 +1,298 @@
-.App {
-  text-align: center;
-}
+@media only screen and (min-width: 992px) {
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+  .app {
+    display: flex;
   }
-}
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  body {
+    height: 100%;
+    max-width: 100%;
+    font-family: Arial, sans-serif;
+    font-size: 18px;
+    box-sizing: border-box;
+  }
+
+  img {
+    /* padding-left: 50px; */
+    width: 200px;
+    height: 200px;
+
+  }
+
+  .usertext {
+    box-sizing: border-box;
+    width: 100%;
+    padding: 2%;
+    padding-left: 20%;
+    border-bottom: 'grey solid 1px';
+    /* background-color: red; */
+    color: black;
+    align-items: center;
+    display: flex;
+  }
+
+  .usertext>div {
+    margin-left: 30px;
+  }
+
+  .comptext>div {
+    margin-left: 30px;
+  }
+
+  .comptext {
+    box-sizing: border-box;
+    display: flex;
+    width: 100%;
+    padding: 2%;
+    padding-left: 20%;
+    background-color: rgb(247, 247, 248);
+    border-bottom: 'grey solid 1px';
+  }
+
+  input[type="text"] {
+    width: 50%;
+    height: 50px;
+    padding-left: 20px;
+    font-size: 20px;
+  }
+
+  /* input[type="submit"] {
+  margin-left: -50px;
+  height: 50px;
+  width: 50px;
+  background: blue;
   color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+  border: 0;
+  -webkit-appearance: none;
+} */
+  .inputdiv {
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 10vh;
+    font-size: 30px;
+    /* position: absolute;  */
+    bottom: 0;
+    box-shadow: 2px;
+    z-index: 1;
+    position: fixed;
   }
-  to {
-    transform: rotate(360deg);
+
+  .sidebar {
+
+    /* position: fixed; */
+    height: 1000px;
+    min-height: 100vh;
+    height: auto;
+    background-color: rgb(32, 33, 35);
+    z-index: 2;
+    width: 18vw;
+    top: 0;
+    left: 0;
+    bottom: 0;
+
+  }
+
+  .mainapp {
+    /* float: right; */
+    width: 82vw;
+    margin-bottom: 100px;
+  }
+  
+  .box {
+    display: flex;
+  }
+
+  .newbutton {
+    background-color: rgb(32, 33, 35);
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    border: 1px solid white;
+    width: 98%;
+    border-radius: 10px;
+    margin-top: 5px;
+    text-align: center;
+    display: block;
+
+  }
+
+  .newbutton:hover {
+    background-color: white;
+    /* Green */
+    color: rgb(32, 33, 35);
+  }
+
+  .submitbutton {
+    margin-left: -60px;
+    height: 50px;
+    width: 50px;
+    background: white;
+    /* color: white; */
+    border: 0;
+
+  }
+
+  .submitbutton:hover {
+    background-color: rgb(247, 247, 248);
+    color: rgb(32, 33, 35);
+  }
+
+  .cat {
+    transform: translate(-30px);
+  }
+
+  .comptextdiv {
+    transform: translate(-30px);
+  }
+
+}
+
+@media only screen and (max-width: 600px) {
+  * {
+    /* border: 1px solid red; */
+  }
+
+  .app {
+    display: flex;
+    flex-direction: column;
+  }
+
+  body {
+    height: 100%;
+    max-width: 100%;
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    box-sizing: border-box;
+  }
+
+  img {
+    width: 200px;
+    height: 200px;
+  }
+
+  .usertext {
+    box-sizing: border-box;
+    width: 100%;
+    padding: 3%;
+    padding-left: 10%;
+    border-bottom: 'grey solid 1px';
+    /* background-color: red; */
+    color: black;
+    align-items: center;
+    display: flex;
+  }
+
+  .usertext>div {
+    margin-left: 30px;
+  }
+
+  .comptext {
+  
+    box-sizing: border-box;
+    display: flex;
+    width: 100%;
+    padding: 3%;
+    padding-left: 20%;
+    background-color: rgb(247, 247, 248);
+    border-bottom: 'grey solid 1px';
+
+  }
+
+  .comptextdiv {
+    transform: translate(-10px);
+  }
+
+  input[type="text"] {
+    /* transform: translate(-50px); */
+    width: 70%;
+    height: 50px;
+    /* padding-left: 20px; */
+    font-size: 20px;
+  }
+
+  .inputdiv {
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 10vh;
+    font-size: 30px;
+    /* position: absolute;  */
+    bottom: 0;
+    box-shadow: 2px;
+    z-index: 1;
+    position: fixed;
+    display: flex;
+    justify-content: center;
+  }
+
+  .sidebar {
+    background-color: rgb(32, 33, 35);
+    width: 100vw;
+    min-height: 50px;
+    height: 10px;
+    z-index: 0;
+  }
+
+  .mainapp {
+    width: 100vw;
+    margin-bottom: 100px;
+  }
+
+  .box {
+    display: flex;
+  }
+
+  .newbutton {
+    background-color: rgb(32, 33, 35);
+    border: none;
+    color: white;
+    padding: 4px;
+    margin: 2px;
+    text-decoration: none;
+    font-size: 10px;
+    border: 1px solid white;
+    /* width: 40%; */
+    border-radius: 10px;
+    text-align: center;
+  }
+
+  .newbutton:hover {
+    background-color: white;
+    color: rgb(32, 33, 35);
+  }
+
+  .buttoncontainer{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    width: 100vw;
+    align-items: center;
+    height: 50px;
+  }
+
+  .submitbutton {
+    margin-left: -51px;
+    height: 50px;
+    width: 50px;
+    background: white;
+    border: 0;
+
+  }
+
+  .submitbutton:hover {
+    background-color: rgb(247, 247, 248);
+    color: rgb(32, 33, 35);
+  }
+
+  .cat {
+    transform: translate(-40px);
   }
 }
